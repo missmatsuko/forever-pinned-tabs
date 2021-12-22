@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Forever Pinned Tabs",
+  "description": "Keep pinned tabs pinned, forever.",
+  "version": "1.0.0",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}
