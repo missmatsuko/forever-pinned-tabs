@@ -1,8 +1,12 @@
 const handleNewWindow = function() {
+  console.log('handle new window');
+
   // Create new pinned tab(s)
-  chrome.tabs.create({
-    url: 'https://calendar.google.com', // TODO: use URLs set from options page
-    pinned: true
+  const url = chrome.storage.sync.get(['url'], function(result) {
+    chrome.tabs.create({
+      url: result.url,
+      pinned: true
+    });
   });
 }
 

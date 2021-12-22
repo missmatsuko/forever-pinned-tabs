@@ -4,11 +4,13 @@
   "description": "Keep pinned tabs pinned, forever.",
   "version": "1.0.0",
   "permissions": [
+    "storage",
     "tabs"
   ],
   "background": {
     "scripts": [
       "background.js"
     ]
-  }
+  },
+  "options_page": "options/options.html"
 }

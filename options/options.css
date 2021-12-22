@@ -1,0 +1,11 @@
+form {
+  padding: 2rem;
+}
+fieldset {
+  border: 0;
+  padding: 1rem 0;
+}
+fieldset legend,
+label {
+  font-size: 1rem;
+}
