@@ -1,11 +1,87 @@
-form {
-  padding: 2rem;
+/* Variables */
+html {
+  --color-white: #eee;
+  --color-black: #333;
+  --color-primary-light: #425a70;
+  --color-primary-dark: #234361;
 }
+
+/* Reset, layout, base styles */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: var(--color-black);
+  background-color: var(--color-white);
+  text-align: center;
+}
+
 fieldset {
   border: 0;
-  padding: 1rem 0;
+  padding: 0;
 }
+
 fieldset legend,
 label {
   font-size: 1rem;
+}
+
+main {
+  width: 100%;
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  color: var(--color-white);
+  background-color: var(--color-primary-dark);
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background-color: var(--color-primary-light)
+}
+
+/* Helper classes */
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Form styling */
+.form {
+
+}
+
+.form__fieldset {
+  margin: 1rem 0;
+}
+
+.form__field {
+  margin: 1rem 0;
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.5rem;
 }
