@@ -3,8 +3,8 @@ Keep pinned tabs pinned, forever.
 
 <!--
 TODO:
-- multiple URLs
-- style options page
-- icons
-- change namespace to browser instead of chrome
+- improve options page UX: add/remove URL fields
+- improve options page JS (kinda messy)
+- add browser extension icons
+- open links from pinned tabs in new tab?
 -->
