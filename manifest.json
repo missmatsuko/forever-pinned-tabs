@@ -4,6 +4,7 @@
   "description": "Keep pinned tabs pinned, forever.",
   "version": "1.0.0",
   "permissions": [
+    "background",
     "storage",
     "tabs"
   ],
