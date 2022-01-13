@@ -1,4 +1,3 @@
-// TODO: set urls value in options
 const urls = ['https://drive.google.com', 'https://calendar.google.com', 'https://keep.google.com'];
 
 const createPinnedTabs = function() {
@@ -20,19 +19,12 @@ const handleNewWindow = function(window) {
   )
   .then(result => {
     const windowIsNormal = result.type === "normal";
-    // TODO: check if pinned tabs are in URL list and only create missing ones
     const windowHasPinnedTabs = result.tabs.some(tab => tab.pinned);
 
     if (windowIsNormal && !windowHasPinnedTabs) {
       createPinnedTabs();
     }
-  });  
+  });
 }
 
-// TODO: Handle first new window (doesn't trigger windows.onCreated)
-// runtime.onStartUp and runtime.onConnect don't work
-// What is the order of events anyway?
-// browser.runtime.onStartUp.addListener(handleNewWindow);
-
-// Handle all other new windows
 browser.windows.onCreated.addListener(handleNewWindow);

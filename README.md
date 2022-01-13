@@ -3,8 +3,9 @@ Keep pinned tabs pinned, forever.
 
 <!--
 TODO:
-- improve options page UX: add/remove URL fields
-- improve options page JS (kinda messy)
+- add pinned tabs on browser start (doesn't trigger windows.onCreated; runtime.onStartUp and runtime.onConnect don't work either)
+- open pinned tabs only if they are not already open (currently just opens when there are no pinned tabs at all)
+- add options for URLs (currently hard-coded)
 - add browser extension icons
 - open links from pinned tabs in new tab?
 -->
