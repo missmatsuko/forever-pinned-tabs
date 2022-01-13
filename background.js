@@ -1,18 +1,21 @@
 const urls = ['https://drive.google.com', 'https://calendar.google.com', 'https://keep.google.com'];
 
-const createPinnedTabs = function() {
+const createPinnedTabs = function(windowId) {
   for (const url of urls) {
     browser.tabs.create({
       url: url,
       pinned: true,
       active: false,
+      windowId: windowId,
     });
   }
 }
 
 const handleNewWindow = function(window) {
+  const windowId = window.id;
+
   browser.windows.get(
-    window.id,
+    windowId,
     {
       populate: true, // Include tab property
     }
@@ -22,7 +25,7 @@ const handleNewWindow = function(window) {
     const windowHasPinnedTabs = result.tabs.some(tab => tab.pinned);
 
     if (windowIsNormal && !windowHasPinnedTabs) {
-      createPinnedTabs();
+      createPinnedTabs(windowId);
     }
   });
 }
