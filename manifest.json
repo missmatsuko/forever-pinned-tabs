@@ -2,16 +2,19 @@
   "manifest_version": 2,
   "name": "Forever Pinned Tabs",
   "description": "Keep pinned tabs pinned, forever.",
-  "version": "1.0.0",
+  "version": "1.0.11",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "forever-pinned-tabs@matsuko.ca",
+      "strict_min_version": "42.0"
+    }
+  },
   "permissions": [
-    "background",
-    "storage",
     "tabs"
   ],
   "background": {
     "scripts": [
       "background.js"
     ]
-  },
-  "options_page": "options/options.html"
+  }
 }
